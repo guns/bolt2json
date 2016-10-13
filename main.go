@@ -60,7 +60,7 @@ func dumpBucket(b *bolt.Bucket) {
 		if v == nil {
 			fmt.Printf("%#v:{", string(k))
 			dumpBucket(b.Bucket(k))
-			fmt.Printf("}")
+			fmt.Print("}")
 		} else {
 			fmt.Printf("%#v:%#v", string(k), string(v))
 		}
